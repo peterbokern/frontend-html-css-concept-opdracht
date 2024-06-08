@@ -11,7 +11,7 @@
     4. Areas
         4.1 Header
         4.2 Introduction
-        etc.
+        4.3 Work
     5. Media Queries
 ////////////////////////*/
 
@@ -46,8 +46,17 @@ h1 {
     font-size: 2.488rem;
 }
 
+.introduction-content h2{
+    font-family: "Merriweather", serif;
+    text-align: center;
+    font-weight: 500;
+    color: var(--purple);
+}
+
 h3 {
+    font-family: "Merriweather", serif;
     font-size: 2.074rem;
+    font-weight: 400;
 }
 
 header {
@@ -65,6 +74,28 @@ header {
     letter-spacing: 1px;
 }
 
+.introduction p{
+    font-weight: 400;
+    text-align: center;
+}
+
+.introduction a{
+    color: var(--purple);
+    text-decoration: none;
+
+}
+
+.articles p {
+    font-weight: 400;
+}
+
+.project-link{
+    color: var(--purple);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.833rem;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -81,6 +112,12 @@ header {
     border: black solid 2px;
 }
 /* ------------------------------- 4. Areas ---------------------------------------- */
+main {
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
 
 /* --------------- 4.1 Header ------------------------- */
 header {
@@ -132,11 +169,9 @@ header {
     justify-content: space-evenly;
     align-items: center;
     row-gap: 25px;
-    padding: 50px;
+    padding: 40px;
 
 }
-
-
 .header-button {
     width: 200px;
     padding: 18px;
@@ -162,4 +197,67 @@ button:hover {
 }
 /* --------------- 4.2 Introduction ------------------- */
 
+.introduction {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 40px;
+    padding: 40px 0 40px 0;
+}
+
+.introduction-content {
+    width: 70%;
+    padding:40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 20px;
+}
+/* --------------- 4.3 Work ------------------- */
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 80px;
+    background-color: var(--grey-light);
+    padding: 80px 0 80px 0;
+}
+
+.article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.article-content {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    padding: 60px;
+}
+
+.article-icon-wrapper {
+    width: 40px;
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+.image-wrapper img {
+    width: 100%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */
