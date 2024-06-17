@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-<header>
+<header class="pseudo-background noise-filter">
     <nav class=" container navigation-wrapper ">
         <ul class="navigation ">
-            <li>Case Studies</li>
-            <li>Services</li>
-            <li>Contact Us</li>
+            <li><a class="link" href="#case-studies">Case Studies</a></li>
+            <li><a class="link" href="#services">Services</a></li>
+            <li><a class="link" href="#contact">Contact Us</a></li>
         </ul>
     </nav>
     <div class="container header-container">
@@ -28,27 +28,29 @@
     </div>
 </header>
 <main>
-    <section class="container introduction">
+    <section  class="introduction pseudo-background">
+        <div class="container introduction-container">
         <div class="introduction-content">
             <h2>Rekupe is a digital agency in Los Angeles.</h2>
             <h2>We use strategic UX, SEO optimization and beautiful visual designs to help your business grow.</h2>
             <h2>We see every project as a fresh opportunity, pushing ourselves to create new digital experiences.</h2>
         </div>
-        <p>Have a question? <a href="">Click here</a> to contact us!</p>
+        <p>Have a question? <a href="#contact">Click here</a> to contact us!</p>
+        </div>
     </section>
-    <section class=" articles dev">
+    <section id="case-studies" class=" articles pseudo-background">
         <article class="container article  ">
-            <div class="article-content dev ">
+            <div class="article-content ">
                 <h2>Rolling Stone</h2>
                 <img class="squiggle-line" src="assets/squiggle_line.svg" alt="squiggle line">
                 <p>You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s a global
                     icon.</p>
                 <a class="project-link" src="">view project</a>
             </div>
-            <span class="image-wrapper dev"><img src="assets/work-image-01.jpeg" alt="Rolling Stone image"></span>
+            <span class="image-wrapper"><img src="assets/work-image-01.jpeg" alt="Rolling Stone image"></span>
         </article>
         <article class="container article ">
-            <div class="article-content dev">
+            <div class="article-content">
                 <h2>Variety</h2>
                 <img class="squiggle-line" src="assets/squiggle_line.svg" alt="squiggle line">
                 <p>Variety is an industry leader for breaking entertainment news, reviews and box office results with
@@ -58,7 +60,7 @@
             <span class="image-wrapper"><img src="assets/work-image-02.jpeg" alt="Variety Stone image"></span>
         </article>
         <article class="container article ">
-            <div class="article-content dev">
+            <div class="article-content">
                 <h2>Worth</h2>
                 <img class="squiggle-line" src="assets/squiggle_line.svg" alt="squiggle line">
                 <p>A global media platform connecting a community that embraces worth beyond wealth.</p>
@@ -67,8 +69,7 @@
             <span class="image-wrapper"><img src="assets/work-image-03.jpeg" alt="Worth image"></span>
         </article>
     </section>
-    <section class=" services container dev ">
-<!--        <div class="services-inner-container dev  ">-->
+    <section id="services" class="container services-container">
             <article class="service">
                 <div class="service-content">
                     <img class="service-icon" src="assets/icon_web-design.svg" alt="Web design icon">
@@ -132,10 +133,9 @@
                         your brand bible and ensure your messaging is focused and targeted.</p>
                 </div>
             </article>
-<!--        </div>-->
     </section>
-    <section class="contact">
-        <div class="container form-container dev">
+    <section id="contact" class="contact noise-filter">
+        <div class="container form-container">
             <div class="contact-form-header">
                 <h1>Let's work together</h1>
                 <p>Have a question? Need a quote? Let us know!</p>
@@ -157,7 +157,7 @@
     </section>
 </main>
 <footer>
-
+    <p class="footer-text">Business website opdracht © NOVI Hogeschool 2022</p>
 </footer>
 </body>
 </html>
