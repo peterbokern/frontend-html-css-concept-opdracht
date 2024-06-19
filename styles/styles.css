@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        4.3 Work
+        4.4 Services
+        5.5 Form
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --black: #0C0C0C;
+    --purple-light: #F2F0FF; /* floating text */
+    --grey: #A7A7A; /* service tile text */
+    --grey-light: #F3F6F9 /* projects background */
+}
+
+/* ------------------------------- 2. Typography ---------------------------*/
+html {
+    font-size: 14px;
+    color: var(--black);
+    font-family: "Roboto", serif;
+    font-weight: 300;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2.488rem;
+}
+
+.introduction-content h2 {
+    font-family: "Merriweather", serif;
+    text-align: center;
+    font-weight: 500;
+    color: var(--purple);
+    z-index: 1;
+}
+
+.articles h2 {
+    font-family: "Merriweather", serif;
+    font-size: 2.074rem;
+    font-weight: 600;
+}
+
+header {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-subtext {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.header-button {
+    font-weight: 100;
+    font-size: 0.694rem;
+    letter-spacing: 1px;
+}
+
+.introduction p {
+    font-weight: 400;
+    text-align: center;
+}
+
+.introduction a {
+    color: var(--purple);
+}
+
+.articles p {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.articles a {
+    font-weight: 600;
+}
+
+.squiggle-line {
+    width: 3.333rem;
+    margin-top: -1.111rem;
+}
+
+.project-link {
+    color: var(--purple);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.833rem;
+}
+
+.service h3 {
+    color: var(--purple);
+    font-family: "Merriweather", serif;
+    font-size: 1.44rem;
+    font-weight: 400;
+}
+
+::placeholder {
+    font-family: "Roboto", serif;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+.container {
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.pseudo-background::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 8vw 0 0 100vw;
+    z-index: 1;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.2rem;
+}
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    background: linear-gradient(320deg, rgba(87, 34, 205, 1) 0%, rgba(72, 69, 228, 1) 55%); /* gradient background */
+    position: relative;
+    padding-bottom: 4.5rem;
+}
+
+header * {
+    z-index: 2;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/noise-texture.png");
+}
+
+header::after {
+    border-color: transparent transparent transparent white;
+    bottom: -0.05rem;
+}
+
+.navigation-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 2.8rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 18rem;
+    list-style: none;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    padding-top: 1rem;
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 2.2rem;
+    align-items: center;
+    padding-bottom: 5.5rem;
+}
+
+.header-icon-container {
+    position: absolute;
+    bottom: 3.9vw;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 1.4rem;
+    padding: 2.2rem;
+}
+
+.header-text {
+    width: 70%
+}
+
+.button {
+    width: 12rem;
+    padding: 1rem;
+    background-color: var(--pink);
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5), 0 0.056rem 0.167rem rgba(0, 0, 0, 0.1);
+    border-radius: 1.389rem;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.header-icon-wrapper {
+    height: 4.5rem;
+}
+
+.header-icon {
+    height: 100%;
+}
+
+button:hover {
+    box-shadow: 0 0.333rem 0.444rem rgba(0, 0, 0, 0.15);
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.introduction-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 4rem;
+    /*padding: 0 0 6rem;*/
+    padding-bottom: 5rem;
+}
+
+.introduction {
+    position: relative;
+}
+
+.introduction::before {
+    content: "hello";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 30vw;
+    font-weight: 600;
+    color: var(--purple-light);
+}
+
+.introduction::after {
+    border-color: transparent transparent transparent var(--grey-light);
+    bottom: -2.5rem;
+}
+
+.introduction-content {
+    width: 70%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 1.2rem;
+}
+
+.introduction p {
+    z-index: 2;
+}
+
+/* --------------- 4.3 Work ------------------- */
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 7rem;
+    background-color: var(--grey-light);
+    padding: 8rem 0 14rem;
+    position: relative;
+}
+
+.articles::before {
+    content: "work";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30vw;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+
+.articles::after {
+    border-color: transparent transparent transparent white;
+    bottom: 0;
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    column-gap: 10rem;
+    row-gap: 5.5rem;
+    padding: 0 3.333rem;
+    z-index: 2;
+}
+
+.article-content {
+    flex-basis: 16.667rem;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    row-gap: 1.7rem;
+}
+
+.article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.article-icon-wrapper {
+    width: 2rem;
+}
+
+.image-wrapper {
+    flex-basis: 28rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.image-wrapper img {
+    width: 100%;
+    box-shadow: 0 11rem 17rem rgba(0, 0, 0, 0.5);
+}
+
+/* --------------- 4.4 Services ------------------- */
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
+    padding: 8rem 0;
+    position: relative;
+}
+
+.services-container::before {
+    content: "services";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    font-size: 20vw;
+    font-weight: 600;
+    text-align: center;
+    color: var(--purple-light);
+    z-index: 1;
+}
+
+.service {
+    flex-basis: 23rem;
+    aspect-ratio: 1/0.9;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: 0.1rem solid var(--purple);
+    box-shadow: 0 11rem 17rem rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    z-index: 2;
+    background-color: white;
+}
+
+.service-content {
+    width: 80%;
+    aspect-ratio: 1/1;
+    margin: 0.5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.833rem;
+}
+
+.service-content p {
+    margin-top: 0.5rem;
+}
+
+.project-link {
+    position: relative;
+}
+
+.project-link::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1px;
+    background-color: var(--purple);
+    transition: width 0.3s ease-in-out;
+    margin-left: 0.4rem;
+    margin-top: 0.4rem;
+}
+
+.project-link:hover {
+    cursor: pointer;
+}
+
+.project-link:hover::after {
+    width: 3em;
+}
+
+.service-icon {
+    height: 3rem;
+}
+
+/* --------------- 4.5 Form ------------------- */
+
+.contact {
+    background: linear-gradient(320deg, rgba(87, 34, 205, 1) 0%, rgba(72, 69, 228, 1) 55%);
+    color: white;
+    position: relative;
+    padding-top: 5.5rem;
+    z-index: 0;
+}
+
+.contact * {
+    z-index: 2;
+}
+
+.contact::before {
+    position: absolute;
+    content: "";
+    height: 0;
+    border-style: solid;
+    border-width: 0 100vw 4.5rem 0;
+    border-color: white white transparent white;
+    top: -1px;
+    z-index: 1;
+}
+
+.contact::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/noise-texture.png");
+    z-index: -1;
+}
+
+.form-container {
+    max-width: 56rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5.5rem;
+    row-gap: 1rem;
+}
+
+.contact-form-header {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 1rem;
+    font-weight: 400;
+}
+
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    padding: 1rem;
+    color: white;
+}
+
+.contact-form-header h1 {
+    font-size: 2.986rem;
+}
+
+.contact-form-header p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+label {
+    width: 100%;
+    font-weight: 600;
+}
+
+label > input,
+label > textarea {
+    display: block;
+    margin-top: 0.1rem;
+    padding: 0.833rem;
+    width: 100%;
+    font-family: "roboto", serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: "roboto", serif;
+    font-weight: 400;
+}
+
+.submit-button {
+    width: 16.667%;
+    align-self: center;
+    padding: 1.6rem 4.5rem;
+    border-radius: 3rem;
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services p {
+    font-size: 0.8rem;
+}
+
+/* --------------- 4.5 Footer ------------------- */
+
+footer {
+    background-color: black;
+    padding: 1.2rem 0;
+    text-align: center;
+}
+
+.footer-text {
+    color: white;
+    font-size: 0.694rem;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (min-width: 768px) {
+    /* voor tablets */
+    html {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    /* voor desktops en groter */
+    html {
+        font-size: 18px;
+    }
+}
