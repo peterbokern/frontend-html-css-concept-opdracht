@@ -36,7 +36,7 @@
 
 /* ------------------------------- 2. Typography ---------------------------*/
 html {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--black);
     font-family: "Roboto", serif;
     font-weight: 300;
@@ -241,6 +241,10 @@ header::after {
     padding: 2.2rem;
 }
 
+.header-text {
+    width: 70%
+}
+
 .button {
     width: 12rem;
     padding: 1rem;
@@ -272,7 +276,8 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     row-gap: 4rem;
-    padding: 3rem 0 12rem;
+    /*padding: 0 0 6rem;*/
+    padding-bottom: 5rem;
 }
 
 .introduction {
@@ -583,7 +588,7 @@ footer {
 @media screen and (min-width: 768px) {
     /* voor tablets */
     html {
-        font-size: 18px;
+        font-size: 16px;
     }
 
 }
@@ -591,6 +596,6 @@ footer {
 @media screen and (min-width: 1200px) {
     /* voor desktops en groter */
     html {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
