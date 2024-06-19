@@ -146,13 +146,6 @@ a {
     z-index: 1;
 }
 
-
-
-/*header *,*/
-/*.contact *{*/
-/*    z-index: 2;*/
-/*}*/
-
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
@@ -168,19 +161,20 @@ header {
     background: linear-gradient(320deg, rgba(87, 34, 205, 1) 0%, rgba(72, 69, 228, 1) 55%); /* gradient background */
     position: relative;
     padding-bottom: 4.5rem;
-    z-index: 0;
 }
 
-/*header::before {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    inset: 0 0 0 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    background: url("assets/noise-texture.png");*/
-/*    mix-blend-mode: hard-light;*/
-/*    z-index: 1;*/
-/*}*/
+header * {
+    z-index: 2;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/noise-texture.png");
+}
 
 header::after {
     border-color: transparent transparent transparent white;
@@ -470,6 +464,11 @@ button:hover {
     color: white;
     position: relative;
     padding-top: 5.5rem;
+    z-index: 0;
+}
+
+.contact * {
+    z-index: 2;
 }
 
 .contact::before {
@@ -478,8 +477,19 @@ button:hover {
     height: 0;
     border-style: solid;
     border-width: 0 100vw 4.5rem 0;
-    border-color: transparent white transparent transparent;
+    border-color: white white transparent white;
     top: -1px;
+    z-index: 1;
+}
+
+.contact::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/noise-texture.png");
+    z-index: -1;
 }
 
 .form-container {
@@ -531,6 +541,7 @@ label > textarea {
     margin-top: 0.1rem;
     padding: 0.833rem;
     width: 100%;
+    font-family: "roboto", serif;
 }
 
 input::placeholder,
