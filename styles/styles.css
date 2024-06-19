@@ -146,16 +146,7 @@ a {
     z-index: 1;
 }
 
-/*.noise-filter::before {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    inset: 0 0 0 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    background: red;*/
-/*    mix-blend-mode: hard-light;*/
-/*    z-index: 1;*/
-/*}*/
+
 
 /*header *,*/
 /*.contact *{*/
@@ -172,11 +163,24 @@ main {
 }
 
 /* --------------- 4.1 Header ------------------------- */
+
 header {
     background: linear-gradient(320deg, rgba(87, 34, 205, 1) 0%, rgba(72, 69, 228, 1) 55%); /* gradient background */
     position: relative;
     padding-bottom: 4.5rem;
+    z-index: 0;
 }
+
+/*header::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    inset: 0 0 0 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: url("assets/noise-texture.png");*/
+/*    mix-blend-mode: hard-light;*/
+/*    z-index: 1;*/
+/*}*/
 
 header::after {
     border-color: transparent transparent transparent white;
